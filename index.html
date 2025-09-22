@@ -9,7 +9,8 @@
   <body>
     <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
-    <nav class="relative bg-gray-800 sticky top-0 z-50">
+
+    <nav class="sticky bg-gray-800 top-0 z-50 w-full">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -119,9 +120,11 @@
       </el-disclosure>
     </nav>
 
-    <div class="w-full h-[200vh]">
-      <div class="w-full h-screen flex items-center sticky top-0" id="heroBox">
-        <div class="relative"></div>
+    <div class="w-full h-[300vh] relative top-0">
+      <div
+        class="relative w-full h-screen flex items-center sticky top-0 overflow-x-hidden"
+        id="heroBox"
+      >
         <div
           class="flex items-center overflow-x-hidden"
           id="imageBox"
@@ -161,9 +164,59 @@
             id="image"
           />
         </div>
+        <div
+          id="humanImage"
+          class="absolute transition duration-1000 ease-in-out"
+        >
+          <img
+            src="./src/image/huma image.png"
+            class="h-[50vh] relative"
+            alt=""
+            id="image"
+          />
+          <img src="./src/image/Logo Text Monitor.png" alt="" class="h-50vh" />
+        </div>
       </div>
     </div>
-    <!-- <div class="w-full h-[200vh]"></div> -->
+    <div class="h-[300vh] w-full border bg-red-500" id="YGrup1">
+      <div
+        class="relative overflow-x-hidden flex h-[100vh] border bg-gray-800 sticky top-0"
+      >
+        <div
+          class="xPage min-w-full h-full flex items-center justify-center text-white text-4xl relative bg-gray-900"
+          id="XGrup1"
+        >
+          Halo, saya adalah Grup 1
+        </div>
+        <div
+          class="xPage min-w-full h-full flex items-center justify-center text-white text-4xl relative bg-gray-700"
+          id="XGrup1"
+        >
+          Halo, saya adalah Grup 2
+        </div>
+      </div>
+    </div>
+    <div style="background: lightblue" class="h-[200vh]">Section 1</div>
+
+    <div style="height: 400px; background: lightgreen" class="h-[200vh]">
+      <div style="position: sticky; top: 0; background: orange; padding: 10px">
+        Aku sticky di dalam section hijau
+      </div>
+      <p style="height: 600px">Konten panjang...</p>
+    </div>
+
+    <div style="height: 300px; background: pink">Section 3</div>
+    <div style="height: 300px; background: lightblue">Section 1</div>
+
+    <div style="height: 400px; background: lightgreen">
+      <div style="position: sticky; top: 0; background: orange; padding: 10px">
+        Aku sticky di dalam section hijau
+      </div>
+      <p style="height: 600px">Konten panjang...</p>
+    </div>
+
+    <div style="height: 300px; background: pink">Section 3</div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
       type="module"
@@ -171,6 +224,11 @@
     <script>
       const heroBox = document.getElementById("heroBox");
       const imageBox = document.getElementById("imageBox");
+      const humanImage = document.getElementById("humanImage");
+      const YGrup1 = document.getElementById("YGrup1");
+      const XGrup1 = document.getElementById("XGrup1");
+      const xPage = document.getElementsByClassName("xPage");
+      humanImage.style.right = `-${humanImage.offsetWidth}px`;
       var marginLeftImageBox =
         heroBox.offsetWidth / 2 - imageBox.offsetWidth / 2;
       imageBox.style.marginLeft = `${marginLeftImageBox}px`;
@@ -186,9 +244,16 @@
         imageBox.style.width = `${50 + (70 - 70 * progress)}vh`;
         marginLeftImageBox = heroBox.offsetWidth / 2 - imageBox.offsetWidth / 2;
         imageBox.style.marginLeft = `${
-          marginLeftImageBox - (marginLeftImageBox - 10 * vh) * progress
+          marginLeftImageBox - (marginLeftImageBox - 20 * vh) * progress
         }px`;
         heroBox.style.justifyContent = "";
+        if (progress > 0.7) {
+          humanImage.style.transform = `translateX(-${
+            humanImage.offsetWidth + 20
+          }px)`;
+        } else {
+          humanImage.style.transform = `translateX(0px)`;
+        }
         if (progress * 100 > 90 || progress == 0) {
           imageBox.style.webkitMaskImage = `linear-gradient(to left, transparent, black 0px, black 100%)`;
           imageBox.style.maskImage = `linear-gradient(to left, transparent, black 0px, black 100%)`;
@@ -196,6 +261,17 @@
           imageBox.style.webkitMaskImage = `linear-gradient(to left, transparent, black 40px, black 100%)`;
           imageBox.style.maskImage = `linear-gradient(to left, transparent, black 40px, black 100%)`;
         }
+        if (YGrup1.getBoundingClientRect().top <= 0) {
+          var progressYGrup1 =
+            ((YGrup1.getBoundingClientRect().top * -1) / YGrup1.offsetHeight) *
+            100;
+
+          for (let el of xPage) {
+            el.style.transform = `translateX(-${progressYGrup1}%)`;
+          }
+          console.log("progressYGrup1", progressYGrup1);
+        }
+        console.log("bouding", YGrup1.getBoundingClientRect().top);
       });
     </script>
   </body>
