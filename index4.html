@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Web Portofolio</title>
+  </head>
+  <body>
+    <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+
+    <nav class="sticky bg-gray-800 top-0 z-50 w-full">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <button
+              type="button"
+              command="--toggle"
+              commandfor="mobile-menu"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500"
+            >
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open main menu</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                data-slot="icon"
+                aria-hidden="true"
+                class="size-6 in-aria-expanded:hidden"
+              >
+                <path
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                data-slot="icon"
+                aria-hidden="true"
+                class="size-6 not-in-aria-expanded:hidden"
+              >
+                <path
+                  d="M6 18 18 6M6 6l12 12"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+          >
+            <div class="flex shrink-0 items-center">
+              <img
+                src="./src/image/Logo Kelompok.png"
+                alt="Your Company"
+                class="h-8 w-auto"
+              />
+            </div>
+            <div class="hidden sm:ml-6 sm:block">
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  aria-current="page"
+                  class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                  >Dashboard</a
+                >
+                <a
+                  href="#"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+                  >Team</a
+                >
+                <a
+                  href="#"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+                  >Projects</a
+                >
+                <a
+                  href="#"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+                  >Calendar</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
+        <div class="space-y-1 px-2 pt-2 pb-3">
+          <a
+            href="#"
+            aria-current="page"
+            class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+            >Dashboard</a
+          >
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+            >Team</a
+          >
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+            >Projects</a
+          >
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white"
+            >Calendar</a
+          >
+        </div>
+      </el-disclosure>
+    </nav>
+
+    <div class="w-full h-[300vh] relative top-0">
+      <div
+        class="relative w-full h-screen flex items-center sticky top-0 overflow-x-hidden"
+        id="heroBox"
+      >
+        <div
+          class="flex items-center overflow-x-hidden"
+          id="imageBox"
+          style="
+            -webkit-mask-image: linear-gradient(
+              to left,
+              transparent,
+              black 40px,
+              black 100%
+            );
+            mask-image: linear-gradient(
+              to left,
+              transparent,
+              black 40px,
+              black 100%
+            );
+          "
+        >
+          <img
+            src="./src/image/Logo Kelompok.png"
+            class="aspect-square h-[50vh] relative"
+            alt=""
+            id="image"
+          />
+          <div class="aspect-square h-[20vh]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+              <!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+              <path
+                d="M507.3 155.3C513.5 149.1 513.5 138.9 507.3 132.7C501.1 126.5 490.9 126.5 484.7 132.7L320 297.4L155.3 132.7C149.1 126.5 138.9 126.5 132.7 132.7C126.5 138.9 126.5 149.1 132.7 155.3L297.4 320L132.7 484.7C126.5 490.9 126.5 501.1 132.7 507.3C138.9 513.5 149.1 513.5 155.3 507.3L320 342.6L484.7 507.3C490.9 513.5 501.1 513.5 507.3 507.3C513.5 501.1 513.5 490.9 507.3 484.7L342.6 320L507.3 155.3z"
+              />
+            </svg>
+          </div>
+          <img
+            src="./src/image/Logo Monitor 2.png"
+            class="aspect-square h-[50vh] relative"
+            alt=""
+            id="image"
+          />
+        </div>
+        <div
+          id="humanImage"
+          class="absolute transition duration-1000 ease-in-out"
+        >
+          <img
+            src="./src/image/huma image.png"
+            class="h-[50vh] relative"
+            alt=""
+            id="image"
+          />
+          <img src="./src/image/Logo Text Monitor.png" alt="" class="h-50vh" />
+        </div>
+      </div>
+    </div>
+    <div class="h-[300vh] w-full border bg-red-500" id="YGrup1">
+      <div
+        class="relative overflow-x-hidden flex h-[100vh] border bg-gray-800 sticky top-0"
+      >
+        <div
+          class="xPage min-w-full h-full flex items-center justify-center text-white text-4xl relative bg-gray-900"
+          id="XGrup1"
+        >
+          Halo, saya adalah Grup 1
+        </div>
+        <div
+          class="xPage min-w-full h-full flex items-center justify-center text-white text-4xl relative bg-gray-700"
+          id="XGrup1"
+        >
+          Halo, saya adalah Grup 2
+        </div>
+      </div>
+    </div>
+    <div style="background: lightblue" class="h-[200vh]">Section 1</div>
+
+    <div style="height: 400px; background: lightgreen" class="h-[200vh]">
+      <div style="position: sticky; top: 0; background: orange; padding: 10px">
+        Aku sticky di dalam section hijau
+      </div>
+      <p style="height: 600px">Konten panjang...</p>
+    </div>
+
+    <div style="height: 300px; background: pink">Section 3</div>
+    <div style="height: 300px; background: lightblue">Section 1</div>
+
+    <div style="height: 400px; background: lightgreen">
+      <div style="position: sticky; top: 0; background: orange; padding: 10px">
+        Aku sticky di dalam section hijau
+      </div>
+      <p style="height: 600px">Konten panjang...</p>
+    </div>
+
+    <div style="height: 300px; background: pink">Section 3</div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+      type="module"
+    ></script>
+    <script>
+      const heroBox = document.getElementById("heroBox");
+      const imageBox = document.getElementById("imageBox");
+      const humanImage = document.getElementById("humanImage");
+      const YGrup1 = document.getElementById("YGrup1");
+      const XGrup1 = document.getElementById("XGrup1");
+      const xPage = document.getElementsByClassName("xPage");
+      humanImage.style.right = `-${humanImage.offsetWidth}px`;
+      var marginLeftImageBox =
+        heroBox.offsetWidth / 2 - imageBox.offsetWidth / 2;
+      imageBox.style.marginLeft = `${marginLeftImageBox}px`;
+      document.addEventListener("scroll", (e) => {
+        console.log(e);
+        console.log(window.scrollY);
+        console.log(window.innerHeight);
+        const vh = window.innerHeight * 0.01;
+        var progress =
+          window.scrollY / window.innerHeight > 1
+            ? 1
+            : window.scrollY / window.innerHeight;
+        imageBox.style.width = `${50 + (70 - 70 * progress)}vh`;
+        marginLeftImageBox = heroBox.offsetWidth / 2 - imageBox.offsetWidth / 2;
+        imageBox.style.marginLeft = `${
+          marginLeftImageBox - (marginLeftImageBox - 20 * vh) * progress
+        }px`;
+        heroBox.style.justifyContent = "";
+        if (progress > 0.7) {
+          humanImage.style.transform = `translateX(-${
+            humanImage.offsetWidth + 20
+          }px)`;
+        } else {
+          humanImage.style.transform = `translateX(0px)`;
+        }
+        if (progress * 100 > 90 || progress == 0) {
+          imageBox.style.webkitMaskImage = `linear-gradient(to left, transparent, black 0px, black 100%)`;
+          imageBox.style.maskImage = `linear-gradient(to left, transparent, black 0px, black 100%)`;
+        } else {
+          imageBox.style.webkitMaskImage = `linear-gradient(to left, transparent, black 40px, black 100%)`;
+          imageBox.style.maskImage = `linear-gradient(to left, transparent, black 40px, black 100%)`;
+        }
+        if (YGrup1.getBoundingClientRect().top <= 0) {
+          var progressYGrup1 =
+            ((YGrup1.getBoundingClientRect().top * -1) / YGrup1.offsetHeight) *
+            100;
+
+          for (let el of xPage) {
+            el.style.transform = `translateX(-${progressYGrup1}%)`;
+          }
+          console.log("progressYGrup1", progressYGrup1);
+        }
+        console.log("bouding", YGrup1.getBoundingClientRect().top);
+      });
+    </script>
+  </body>
+</html>
