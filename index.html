@@ -81,27 +81,34 @@
             </div>
             <div class="hidden sm:ml-6 sm:block">
               <div class="flex space-x-4">
-                <a
+                <div
+                  onclick="document.getElementById('Home').scrollIntoView({behavior: 'smooth'})"
                   href="#"
-                  aria-current="page"
-                  class="rounded-md bg-[var(--secondary)] px-3 py-2 text-sm font-medium text-white"
-                  >Home</a
+                  class="cursor-pointer rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-[var(--accent)] hover:text-white"
                 >
-                <a
+                  Home
+                </div>
+                <div
+                  onclick="document.getElementById('inforPage').scrollIntoView({behavior: 'smooth'})"
                   href="#"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-[var(--accent)] hover:text-white"
-                  >Member</a
+                  class="cursor-pointer rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-[var(--accent)] hover:text-white"
                 >
-                <a
+                  Member
+                </div>
+                <div
+                  onclick="document.getElementById('Materi').scrollIntoView({behavior: 'smooth'})"
                   href="#"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-[var(--accent)] hover:text-white"
-                  >Materi</a
+                  class="cursor-pointer rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-[var(--accent)] hover:text-white"
                 >
-                <a
+                  Materi
+                </div>
+                <div
+                  onclick="document.getElementById('AbuotUs').scrollIntoView({behavior: 'smooth'})"
                   href="#"
-                  class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-[var(--accent)] hover:text-white"
-                  >About Us</a
+                  class="cursor-pointer rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-[var(--accent)] hover:text-white"
                 >
+                  About Us
+                </div>
               </div>
             </div>
           </div>
@@ -111,40 +118,48 @@
       <!-- mobile -->
       <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
         <div class="space-y-1 px-2 pt-2 pb-3">
-          <a
+          <div
             href="#"
-            aria-current="page"
-            class="block rounded-md bg-[var(--secondary)] px-3 py-2 text-base font-medium text-white"
-            >Home</a
-          >
-          <a
-            href="#"
+            onclick="document.getElementById('Home').scrollIntoView({behavior: 'smooth'})"
             class="block rounded-md px-3 py-2 text-base font-medium text-[var(--accent)] hover:bg-[var(--highlight)] hover:text-white"
-            >Member</a
           >
-          <a
+            Home
+          </div>
+          <div
             href="#"
+            onclick="document.getElementById('inforPage').scrollIntoView({behavior: 'smooth'})"
             class="block rounded-md px-3 py-2 text-base font-medium text-[var(--accent)] hover:bg-[var(--highlight)] hover:text-white"
-            >Materi</a
           >
-          <a
+            Member
+          </div>
+          <div
             href="#"
+            onclick="document.getElementById('Materi').scrollIntoView({behavior: 'smooth'})"
             class="block rounded-md px-3 py-2 text-base font-medium text-[var(--accent)] hover:bg-[var(--highlight)] hover:text-white"
-            >About Us</a
           >
+            Materi
+          </div>
+          <div
+            href="#"
+            onclick="document.getElementById('AbuotUs').scrollIntoView({behavior: 'smooth'})"
+            class="block rounded-md px-3 py-2 text-base font-medium text-[var(--accent)] hover:bg-[var(--highlight)] hover:text-white"
+          >
+            About Us
+          </div>
         </div>
       </el-disclosure>
     </nav>
 
     <!-- Hero -->
     <div
+      id="Home"
       class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-400 to-blue-600 text-white"
     >
       <div class="text-center">
         <img
           src="./src/image/c++xMONITOR.png"
           alt="Logo C++"
-          class="mx-auto h-32 mb-6"
+          class="mx-auto mb-6 w-[70%] lg:w-[50%]"
         />
         <h1 class="text-5xl font-bold">Kelompok C++</h1>
         <p class="text-xl mt-4">MONITOR 2025</p>
@@ -343,6 +358,7 @@
       </a>
     </div>
     <div
+      id="Materi"
       class="flex w-full bg-linear-to-r from-[#212025] to-[#1A191E] justify-center items-center p-7"
     >
       <div class="flex items-end">
@@ -395,6 +411,7 @@
       </a>
     </div>
     <div
+      id="AbuotUs"
       class="flex bg-gradient-to-r flex-wrap lg:flex-nowrap flex-row from-blue-400 to-blue-600 overflow-x-hidden pt-10"
     >
       <div
@@ -458,7 +475,7 @@
       class="flex bg-gradient-to-r flex-wrap lg:flex-nowrap flex-row from-blue-400 to-blue-600 overflow-x-hidden pt-10"
       id="inforPage"
     >
-      <div class="w-full overflow-hidden flex items-center" id="boxr">
+      <div class="overflow-hidden flex items-center" id="boxr">
         <div
           class="aspect-square my-4 py-16 pe-16 bg-blue-300 rounded-r-[10vh] hidden lg:block"
         >
@@ -469,14 +486,14 @@
           />
         </div>
       </div>
-      <div class="flex flex-col w-full px-16 justify-center">
+      <div class="flex flex-col w-full px-5 lg:px-16 justify-center">
         <div class="flex space-x-4 mb-6">
           <img class="h-10" src="./src/image/c++xMONITOR.png" alt="" />
         </div>
         <div
           class="text-[48px] font-bold mb-3 lg:mb-6 text-[var(--primary)] up"
         >
-          Bahasa C++
+          Teknik Informatika
         </div>
         <div
           class="w-full overflow-hidden flex items-center block lg:hidden"
@@ -507,7 +524,7 @@
       class="flex bg-gradient-to-r flex-wrap lg:flex-nowrap flex-row from-blue-400 to-blue-600 overflow-x-hidden pt-10"
     >
       <div
-        class="flex flex-col w-full px-5 lg:px-16 justify-center overflow-hidden"
+        class="w-full flex flex-col w-full px-5 lg:px-16 justify-center overflow-hidden"
       >
         <div class="flex space-x-4 mb-6">
           <img class="h-10" src="./src/image/c++xMONITOR.png" alt="" />
@@ -517,11 +534,8 @@
         >
           C++
         </div>
-        <div
-          class="w-full overflow-hidden flex items-center w-max-[50%]"
-          id="boxl"
-        >
-          <div class="w-full my-4 p-5 bg-blue-300 rounded-[10vh] lg:hidden">
+        <div class="w-full flex items-center w-max-[50%]" id="boxl">
+          <div class="my-4 p-5 bg-blue-300 rounded-[10vh] lg:hidden">
             <img
               src="./src/image/Bjarne-2.jpg"
               alt="fst"
